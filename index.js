@@ -118,3 +118,8 @@ const restaurant = {
 
 // [a,b] =[b,a]
 // console.log(a,b)
+
+//The problem with short circuting is it will consider the 0 as null
+//to overcome this use nullish coalesching
+
+//??
