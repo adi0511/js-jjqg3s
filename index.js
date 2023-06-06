@@ -66,31 +66,55 @@ const restaurant = {
 // let { openingHours } = restaurant;
 // console.log(restaurant);
 
-// let {
-//   fri: { open, close },
-// } = openingHours;
-// console.log(open, close);
+// // let {
+// //   fri: { open, close },
+// // } = openingHours;
+// // console.log(open, close);
 
-// //Spread operator (...)
+// // //Spread operator (...)
 
-// let arr = [1, 2, 3, 4, 5, 6];
-// let arr1 = [22, 33, ...arr];
-// console.log(arr1);
+// // let arr = [1, 2, 3, 4, 5, 6];
+// // let arr1 = [22, 33, ...arr];
+// // console.log(arr1);
 
-// //spread operator works with all the iterables(set,array,string)
+// // //spread operator works with all the iterables(set,array,string)
 
-// var str="aditya";
-// var arr2 =[...str,"s","i"]
-// console.log(arr2)
+// // var str="aditya";
+// // var arr2 =[...str,"s","i"]
+// // console.log(arr2)
 
-// //after ES2018 we can use spread operator on objects
+// // //after ES2018 we can use spread operator on objects
 
-// var obj1 ={...restaurant,test:'testing'};
-// console.log(restaurant);
-// console.log(obj1)
+// // var obj1 ={...restaurant,test:'testing'};
+// // console.log(restaurant);
+// // console.log(obj1)
 
-//rest operator is used to pack the elements into an array(opposite of spread,both have the same syntax).
-//if ... is used on right of assignment operator then its as spread operator if on left then its a rest operator
+// //rest operator is used to pack the elements into an array(opposite of spread,both have the same syntax).
+// //if ... is used on right of assignment operator then its as spread operator if on left then its a rest operator
 
-var [a, b, ...c] = [1, 2, 3, 4, 5, 6, 7, 8];
-console.log(a, b, c);
+// var [a, b, ...c] = [1, 2, 3, 4, 5, 6, 7, 8];
+// console.log(a, b, c);
+
+// //example for REST operator
+// var sum=function(...number){
+//   var sum=0;
+//   for(var i=0;i<number.length;i++){
+//     sum=sum + number[i]
+//   }
+
+//   console.log(sum)
+
+// }
+
+// sum(1,2,3,4)
+// //short circuting
+// var test = 0 && null &&''&&null;
+// console.log(test)
+
+//  ... spread operator rest operator
+
+// var a=10;
+// var b=20;
+
+// [a,b] =[b,a]
+// console.log(a,b)
