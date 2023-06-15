@@ -123,3 +123,43 @@ const restaurant = {
 //to overcome this use nullish coalesching
 
 //??
+
+//FOR OF LOOP
+
+// var a=[1,2,3,4,5,6]
+// for(var i of a){
+//   console.log(i)
+// }
+
+// OBJECTS LOOPING FOR OF LOOPING
+
+const obj = {
+  name: 'aditya',
+  title: 'sinha',
+  city: 'bangalore',
+};
+//looping over keys
+
+// var key = Object.keys(obj);
+// console.log(key) // returns array of key
+// for(var i of key)
+// {
+//   console.log(i)
+// }
+// for(var [a,b,c,d,e] of key)
+// {
+//   console.log(a,b,c,d,e)
+// }
+
+//looping over values
+
+// var val = Object.values(obj);
+// console.log(val); //will give array of values
+// //looping over entire object
+
+// var obj1 = Object.entries(obj);
+// console.log(obj1); //returns array of array
+
+// for ([a, b] of obj1) {
+//   console.log(`key is ${a} and value is ${b}`);
+// }
