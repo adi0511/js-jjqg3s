@@ -1,66 +1,52 @@
-// //Function
+//ARRAYS
 
-// //PASSING PRIMITIVE AND OBJECT IN FUNCTION
+//methods in array
 
-// var a = 'aditya';
-// var b = {
-//   name: 'aditya',
-//   title: 'sinha',
-// };
+var a = ['a', 'b', 'c', 'd'];
+//slice-it will return a new array without mutationg the original
+//splice-it will mutate the original
+//reverse-it will reverse and mutate the original
+//concat-combine two array and will not muatate
+//join-returns a string
+console.log(typeof a.join('-'), a.join('-'));
 
-// function test(c, d) {
-//   (c = 'sinha'), (d.name = 'sinha');
-// }
-// test(a, b);
-// console.log(a, b);
 
-// //In javascript function are simply other object
-// //First class function is nothing but a theoretical term given to functions in javascript as it be used as a value.
+//at-same as the bracket notation,only difference is it can take negative index
+console.log(a.at(-1)) //it also works on string
 
-// var a =function(){
-//   console.log("First class function");
-// }
 
-// //Higher order function is nothing but if some function is acceptiong or returning a function
 
-// var a = (a,b)=>{
+//looping using forEach 
+//it is a higher order function which takes three argument
+//1.current index array value
+//2.index
+//3.array
+//the only issue with this is that break end don't work here
 
-// }
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+movements.forEach((a,b,c)=>{
+  console.log(a,b,c)
+})
+console.log(movements.lastIndexOf(450))
 
-//CALL and APPLY function
-//In javascript we can use function as a variable
-//call function is a method provided to the function as it acts as other object also
-//which is used to explicitly allow the "this" keyword to point to a specific object
+//we can use forEach on map and set as well
+//in case for map
+//parameter are as follows..(value,key,map)
+//for set (value,key,set)
 
-const callObj = {
-  name: 'aditya',
-  title: 'sinha',
-  callTest(check) {
-    console.log(`${this.name} ${this.title} ${check}`);
-  },
-};
-callObj.callTest('works');
+//find-it also similar like filter but the there are two difference
+//it will not return an array infact will return an element and will alwasys return the first element
 
-//in above code we have an obj which has a fuction inside this,if we are calling the function directly from obj its working fine
-//lets try assinging that funnction to variable as its a first class citizen
-var b = callObj.callTest;
-b('sinha'); //here in this case we can see undefined because the this keyword is pointing to the object but we are using the function in the outer scope
+console.log(movements.find(a=>a===3000))
 
-//So now we will use the call function
+//findIndex-same as find but will return index
 
-b.call(callObj, 'works'); //so it will takes arguments,where first argument is the object to which you want to point and the rest are the argument to the function.
+console.log(movements.findIndex(a=>a===3000))
 
-//Apply function is also the same, the only difference is it will take the argument to function as an array.
+//some and every method are like includes only the only difference is in includeds we can check only the equality but in here we can have a condition
 
-var arr = [1, 2, 3, 4];
+//flat and flatmap
+//flat method doesn't take any callback,it is used to remove nesting in an array,you can select the level of nesting
+//flat map is not nothing but flat+map
 
-//Bind method is also like the call and aplly but only difference is that it will return a ew function with the this keyword pointing to specific obj.
-
-var c = b.bind(callObj);
-c('workss');
-
-//IIFE immediately inviked  function expression-The function that is called just once
-
-(function () {
-  console.log('IIFE');
-})();
+console.log(new Array(7,1))
