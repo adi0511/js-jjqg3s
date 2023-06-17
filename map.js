@@ -16,6 +16,7 @@ console.log(mapObj.set(4, 'adi'));
 console.log(mapObj.set(4, 'adi'));
 console.log(mapObj.size);
 
+
 //NOTE: arrays,strings,map,set are all iterable but objects are not iterable
 //we use Object.entries() to make it in form of array of array then iterate
 
